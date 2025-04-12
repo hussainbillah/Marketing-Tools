@@ -6,9 +6,10 @@
 <body>
   <h1>User Registration</h1>
   
-  <% if (query.success) { %>
-    <p style="color:green;">Registration Successful!</p>
-  <% } %>
+<% if (typeof success !== 'undefined' && success) { %>
+  <p style="color:green;">Registration Successful!</p>
+<% } %>
+
 
   <form action="/register" method="POST">
     <input type="text" name="username" placeholder="Username" required><br>

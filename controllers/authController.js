@@ -1,7 +1,7 @@
 const User = require('../models/User');
 
 const showRegisterForm = (req, res) => {
-  res.render('pages/register');
+  res.render('pages/register', { success: req.query.success });
 };
 
 const registerUser = async (req, res) => {
