@@ -1,7 +1,9 @@
 const User = require('../models/User');
 
+
 const showRegisterForm = (req, res) => {
-  res.render('pages/register', { success: req.query.success });
+  const success = req.query.success === 'true'; // কুয়েরি স্ট্রিং থেকে success নিচ্ছি
+  res.render('pages/register', { success });
 };
 
 const registerUser = async (req, res) => {
